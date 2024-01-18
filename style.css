@@ -1,3 +1,22 @@
-*{
-    color:red;
+.Keyboard {
+    width: 70%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+}
+
+.word{
+    margin: 5%;
+}
+
+.words {
+    height: 20px;
+    width: 25px;
+    display: inline-block;
+    border-color: black;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-style: solid;
 }
