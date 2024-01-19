@@ -1,56 +1,52 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahorcado</title>
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="./assets/styles.css">
 </head>
 
 <body>
-    <h1>Ahorcado 2024</h1>
-    <br>
-    <div class="stickman">
+    <div id="titulo">
+        © David Arevalo KINAL 2024
+    </div>
+    <div id="espacio"></div>
+    <div class="calculadora">
+        <input type="text" readonly id="pantalla">
+        <div>
+            <div class="botones">
+                <button onclick="agregarCaracter('7')">7</button>
+                <button onclick="agregarCaracter('8')">8</button>
+                <button onclick="agregarCaracter('9')">9</button>
+                <button onclick="agregarCaracter('/')">/</button>
+                <button onclick="agregarCaracter('4')">4</button>
+                <button onclick="agregarCaracter('5')">5</button>
+                <button onclick="agregarCaracter('6')">6</button>
+                <button onclick="agregarCaracter('*')">*</button>
+                <button onclick="agregarCaracter('1')">1</button>
+                <button onclick="agregarCaracter('2')">2</button>
+                <button onclick="agregarCaracter('3')">3</button>
+                <button onclick="agregarCaracter('-')">-</button>
+                <button onclick="agregarCaracter('0')">0</button>
+                <button onclick="agregarCaracter('.')">.</button>
+                <button onclick="calcular()">=</button>
+                <button onclick="agregarCaracter('+')">+</button>
+                <button onclick="limpiarPantalla()">C</button>
+            </div>
+        </div>
 
     </div>
-    <div class="word">
-        <div class="words"> <label for="1" class="labels"></label></div>
-        <div class="words"><label for="2" class="labels"></label></div>
-        <div class="words"><label for="3" class="labels"></label></div>
-        <div class="words"><label for="4" class="labels"></label></div>
-        <div class="words"><label for="5" class="labels"></label></div>
-        <div class="words"><label for="6" class="labels"></label></div>
+    <div id="foot">
+        Bienvenido a mi Calculadora
+    </div>
 
-    </div>
-    <div class="Keyboard">
-        <button>A</button>
-        <button>B</button>
-        <button>C</button>
-        <button>D</button>
-        <button>E</button>
-        <button>F</button>
-        <button>G</button>
-        <button>H</button>
-        <button>I</button>
-        <button>J</button>
-        <button>K</button>
-        <button>L</button>
-        <button>M</button>
-        <button>N</button>
-        <button>O</button>
-        <button>P</button>
-        <button>Q</button>
-        <button>R</button>
-        <button>S</button>
-        <button>T</button>
-        <button>U</button>
-        <button>V</button>
-        <button>W</button>
-        <button>X</button>
-        <button>Y</button>
-        <button>Z</button>
-    </div>
+    <script src="./assets/logica.js"></script>
+
+
+
+
 
 </body>
 
