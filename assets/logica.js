@@ -1,9 +1,18 @@
-function enviarDatos() {
+async function enviarDatos() {
     const nombre = document.getElementById('nombre').value;
+    console.log(nombre);
 
-    enviarDatosAlServidor(nombre)
+    /*enviarDatosAlServidor(nombre)
         .then(mensajeAgradecimiento)
-        .catch(mensajeError);
+        .catch(mensajeError);*/
+
+    try {
+        const resultado = await enviarDatosAlServidor(nombre);
+        mensajeAgradecimiento(resultado);
+    } catch (e) {
+        mensajeError(e);
+    }
+
 }
 
 
@@ -13,11 +22,14 @@ function enviarDatosAlServidor(nombre) {
         setTimeout(() => {
             const exito = nombre.toLowerCase() !== 'error';
 
-            if (exito) {
+            /*if (exito) {
                 resolve('Bienvenido al sistema');
             } else {
                 reject('acceso denegado');
-            }
+            }*/
+
+            const resultado = exito ? 'Bienvenido al sistema' : 'Datos erroneos';
+            exito ? resolve(resultado) : reject(resultado);
 
         }, 2000);
 
